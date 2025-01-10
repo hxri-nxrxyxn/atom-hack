@@ -81,3 +81,7 @@
 body {
   padding: 0.5rem 2rem;
 }
+
+html {
+  font-size: 18px;
+}

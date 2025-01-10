@@ -12,25 +12,17 @@
 <Nav/>
 <Card.Root class="mx-auto max-w-sm">
   <Card.Header>
-    <Card.Title class="text-xl">Hearing</Card.Title>
-    <Card.Description>Hearing with ease</Card.Description>
+    <Card.Title class="text-xl">Motion</Card.Title>
+    <Card.Description>let's make them know our necessities</Card.Description>
   </Card.Header>
   <Card.Content>
     <div class="grid gap-4">
       <div class="grid gap-2">
-        <Link to="/vision">
-          <Button type="submit" variant="outline" class="w-full">Vision</Button>
-        </Link>
-        <Link to="/hearing">
-          <Button type="submit" variant="outline" class="w-full">Hearing</Button>
-        </Link>
-        <Link to="/motion">
-          <Button type="submit" variant="outline" class="w-full">Motion</Button>
-        </Link>
-        <Link to="/speech">
-          <Button type="submit" variant="outline" class="w-full">Speech</Button>
-        </Link>
+        <Button type="submit" variant="outline" class="w-full">Go to bathroom</Button>
+        <Button type="submit" variant="outline" class="w-full">Need food</Button>
+        <Button type="submit" variant="outline" class="w-full">Turn me over</Button>
       </div>
     </div>
   </Card.Content>
 </Card.Root>
+
