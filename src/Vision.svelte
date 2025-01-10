@@ -21,7 +21,5 @@
         <Button type="submit" class="h-40 w-full">Read aloud actions</Button>
       </div>
     </div>
-    
   </Card.Content>
 </Card.Root>
-
