@@ -1,4 +1,5 @@
 <script>
+  import { fade } from 'svelte/transition';
   import Nav from "./Nav.svelte"
   import {Router, Link} from "svelte-routing"
   import { Button } from "$lib/components/ui/button/index.js";
@@ -9,6 +10,7 @@
   import { Textarea } from "$lib/components/ui/textarea";
 </script>
 
+<main transition:fade={{ duration: 600 }}>
 <Nav/>
 <Card.Root class="mx-auto max-w-sm">
   <Card.Header>
@@ -34,3 +36,4 @@
     </div>
   </Card.Content>
 </Card.Root>
+</main>
