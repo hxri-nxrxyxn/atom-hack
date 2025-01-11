@@ -48,7 +48,12 @@
           <Label for="password">Password</Label>
           <Input id="password" type="password" bind:value={password} />
         </div>
-        <Button type="submit" class="w-full" on:click={handleSubmit}>
+        <Link to="/parent">
+        <Button type="submit" variant="outline" class="w-full">
+          Companion Login
+        </Button>
+        </Link>
+        <Button type="submit" class="w-full" onclick={handleSubmit}>
           Login
         </Button>
       </div>

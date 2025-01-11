@@ -1,9 +1,12 @@
 <script>
+    import {Route, Router, Link} from 'svelte-routing'
   </script>
 
 
 <main>
+  <Link to="/">
       <h1>ATOM</h1>
+    </Link>
 </main>
 
   <style>
