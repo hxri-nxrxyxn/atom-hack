@@ -27,6 +27,11 @@
     "@capacitor/app": "^6.0.2",
     "@capacitor/core": "^6.2.0",
     "@capacitor/screen-reader": "^6.0.3",
+    "@google/generative-ai": "^0.21.0",
+    "@tensorflow-models/coco-ssd": "^2.2.3",
+    "@tensorflow/tfjs-backend-cpu": "^4.22.0",
+    "@tensorflow/tfjs-backend-webgl": "^4.22.0",
+    "maplibre-gl": "^5.0.0",
     "svelte-routing": "^2.13.0"
   }
 }

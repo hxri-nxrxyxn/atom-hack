@@ -11,6 +11,7 @@
   import Motion from "./Motion.svelte"
   import Hearing from "./Hearing.svelte"
   import Parent from "./Parent.svelte"
+  import Sos from "./Sos.svelte"
 
   import { onMount, onDestroy  } from 'svelte';
   import { App  } from '@capacitor/app';
@@ -46,8 +47,21 @@
   <Route path="/vision" component="{Vision}"/>
   <Route path="/speech" component="{Speech}"/>
   <Route path="/motion" component="{Motion}"/>
+  <Route path="/hearing" component="{Hearing}"/>
   <Route path="/parent" component="{Parent}"/>
+  <Route path="/emergency" component="{Sos}"/>
   </Router>
 
+  <i><img src="https://icons.veryicon.com/png/System/Windows%208/Media%20Controls%20Mute.png" width="16px"></i>
 
-<style></style>
+<style>
+  i {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px grey;
+    padding: 0.5rem;
+  }
+</style>

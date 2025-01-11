@@ -5,10 +5,11 @@
   import { onMount } from 'svelte';
 
   let tasks = [
-    "Task 1: Walk forward",
-    "Task 2: Turn left",
-    "Task 3: Pick up the object",
-    "Task 4: Place it on the table",
+    "Task 1: AI Caretaker",
+    "Task 2: RealTime Object Detection",
+    "Task 3: Text Recognition",
+    "Task 4: Color Detection",
+    "Task 5: Currency Detection",
   ];
   let currentTaskIndex = 0;
   let currentTask = tasks[currentTaskIndex];
@@ -38,7 +39,8 @@
       clearTimeout(timer);
     }
     if(currentTaskIndex < tasks.length){
-        alert(currentTask);
+      // do things here 
+      speak(currentTask)
     } else {
         console.log("clicked");
     }
@@ -71,7 +73,7 @@
       if (currentTaskIndex < tasks.length) {
         nextTask();
       }
-    }, 2000);
+    }, 5000);
   }
 
   $: if (currentTaskIndex === 0 && tasks.length > 0) {
@@ -83,11 +85,15 @@
 <Nav />
 <Card.Root class="mx-auto max-w-sm">
   <Card.Header>
-    <Card.Title class="text-xl">Vision</Card.Title>
-    <Card.Description>Do quick actions with limited vision</Card.Description>
+    <Card.Title class="text-xl">Visual Assistance</Card.Title>
+    <Card.Description>See the world differently with smart tools that guide and read for you!</Card.Description>
   </Card.Header>
   <Card.Content>
     <div class="grid gap-4">
+
+      <div class="grid gap-2">
+      </div>
+
       <div class="grid gap-2">
         <Button disabled={currentTask === "All tasks completed!"} type="button" variant="outline" class="h-40 w-full">
           {currentTask}

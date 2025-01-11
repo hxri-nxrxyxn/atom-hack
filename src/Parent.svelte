@@ -46,8 +46,6 @@
           
         })
         .catch(error => {
-                  value2 = "nil"
-                
         });
     };
       fetchData();
@@ -64,8 +62,8 @@
 
     <Card.Root class="mx-auto max-w-sm">
       <Card.Header>
-        <Card.Title class="text-xl">Watch Readings</Card.Title>
-        <Card.Description>Realtime readings from watch</Card.Description>
+        <Card.Title class="text-xl">Companion Box Realtime Support</Card.Title>
+        <Card.Description></Card.Description>
       </Card.Header>
       <Card.Content>
         <p>
@@ -76,8 +74,8 @@
 
     <Card.Root class="mx-auto max-w-sm">
       <Card.Header>
-        <Card.Title class="text-xl">Gesture Control Readings</Card.Title>
-        <Card.Description>Gesture readings</Card.Description>
+        <Card.Title class="text-xl">Care Band</Card.Title>
+        <Card.Description>Fall detection and tracking made simple. Stay Safe, Stay Connected.</Card.Description>
       </Card.Header>
       <Card.Content>
         <p>
@@ -89,5 +87,4 @@
         </p>
       </Card.Content>
     </Card.Root>
-
   </div>

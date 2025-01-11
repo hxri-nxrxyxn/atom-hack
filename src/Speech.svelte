@@ -62,8 +62,8 @@ async function handleReadMessage() {
 <Nav/>
 <Card.Root class="mx-auto max-w-sm">
   <Card.Header>
-    <Card.Title class="text-xl">Speech</Card.Title>
-    <Card.Description>Let's connect with ease</Card.Description>
+    <Card.Title class="text-xl">Speech Assistance</Card.Title>
+    <Card.Description>Say it your way - text, gestures, or voice, we've got you covered!</Card.Description>
   </Card.Header>
   <Card.Content>
     <div class="grid gap-4">

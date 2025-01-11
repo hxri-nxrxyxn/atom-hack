@@ -67,8 +67,8 @@
 <Nav/>
 <Card.Root class="mx-auto max-w-sm">
   <Card.Header>
-    <Card.Title class="text-xl">Hearing</Card.Title>
-    <Card.Description>Hearing with ease</Card.Description>
+    <Card.Title class="text-xl">Hearing Support</Card.Title>
+    <Card.Description>Feel the beat, See the words, Never miss a moment!</Card.Description>
   </Card.Header>
   <Card.Content>
     <div class="grid gap-4">

@@ -12,8 +12,8 @@
 <Nav/>
 <Card.Root class="mx-auto max-w-sm">
   <Card.Header>
-    <Card.Title class="text-xl">Motion</Card.Title>
-    <Card.Description>let's make them know our necessities</Card.Description>
+    <Card.Title class="text-xl">Mobility Assistance</Card.Title>
+    <Card.Description>Move with ease - Your personal navigator is here!</Card.Description>
   </Card.Header>
   <Card.Content>
     <div class="grid gap-4">
@@ -21,6 +21,19 @@
         <Button type="submit" variant="outline" class="w-full">Go to bathroom</Button>
         <Button type="submit" variant="outline" class="w-full">Need food</Button>
         <Button type="submit" variant="outline" class="w-full">Turn me over</Button>
+      </div>
+
+      <div class="grid gap-4">
+        <div id="mapp" style="width: 100%; height: 500px"></div>
+        <script>
+          const map = new maplibregl.Map({
+          style: 'https://tiles.openfreemap.org/styles/liberty',
+          center: [13.388, 52.517],
+          zoom: 9.5,
+          container: 'map',
+
+          })
+        </script>
       </div>
     </div>
   </Card.Content>

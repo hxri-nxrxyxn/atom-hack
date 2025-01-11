@@ -1,5 +1,5 @@
 {
-  "name": "My PWA", // Full name of your app
+  "name": "My PWA", 
   "short_name": "PWA", // Short name (used on home screen)
   "description": "A simple PWA example",
   "start_url": "/", // URL to load when the app is launched
