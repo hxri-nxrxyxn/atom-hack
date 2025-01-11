@@ -22,8 +22,11 @@
     "vite": "^6.0.5"
   },
   "dependencies": {
+    "@capacitor-community/text-to-speech": "^5.1.0",
     "@capacitor/android": "^6.2.0",
+    "@capacitor/app": "^6.0.2",
     "@capacitor/core": "^6.2.0",
+    "@capacitor/screen-reader": "^6.0.3",
     "svelte-routing": "^2.13.0"
   }
 }

@@ -21,16 +21,16 @@
     <div class="grid gap-4">
       <div class="grid gap-2">
         <Link to="/vision">
-          <Button type="submit" variant="outline" class="w-full">Vision</Button>
+          <Button type="submit" variant="outline" class="w-full">Visual Accessibility</Button>
         </Link>
         <Link to="/hearing">
-          <Button type="submit" variant="outline" class="w-full">Hearing</Button>
+          <Button type="submit" variant="outline" class="w-full">Hearing Support</Button>
         </Link>
         <Link to="/motion">
-          <Button type="submit" variant="outline" class="w-full">Motion</Button>
+          <Button type="submit" variant="outline" class="w-full">Mobility Assistance</Button>
         </Link>
         <Link to="/speech">
-          <Button type="submit" variant="outline" class="w-full">Speech</Button>
+          <Button type="submit" variant="outline" class="w-full">Speech Assistance</Button>
         </Link>
       </div>
     </div>

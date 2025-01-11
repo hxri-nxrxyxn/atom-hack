@@ -8,32 +8,54 @@
   import { Slider } from "$lib/components/ui/slider";
   import { Textarea } from "$lib/components/ui/textarea";
 
-  let message = "";
-
-function speak(text) {
-  if ('speechSynthesis' in window) {
-    const msg = new SpeechSynthesisUtterance();
-    msg.text = text;
-
-    // Voice selection (improved):
-    const voices = window.speechSynthesis.getVoices();
-    const preferredVoice = voices.find(voice => voice.lang.includes("en-US")) || voices[0]; // Fallback to first voice
-    if (preferredVoice) {
-      msg.voice = preferredVoice;
-    }
-
-    window.speechSynthesis.speak(msg);
-  } else {
-    alert('Your browser does not support the Web Speech API');
+  import { TextToSpeech  } from '@capacitor-community/text-to-speech';
+  async function initializeTTS() {
+      await TextToSpeech.initialize();
+    
   }
-}
+  initializeTTS(); // Call this on component mount or initialization
+
+  let message = "";
+  function speak(text) {
+      if ('speechSynthesis' in window) {
+          const msg = new SpeechSynthesisUtterance();
+          msg.text = text;
+
+          // Voice selection (improved):
+          const voices = window.speechSynthesis.getVoices();
+          const preferredVoice = voices.find(voice => voice.lang.includes("en-US")) || voices[0]; // Fallback to first voice
+          if (preferredVoice) {
+              msg.voice = preferredVoice;
+            
+  }
+          window.speechSynthesis.speak(msg);
+  } else {
+        alert('Your browser does not support the Web Speech API');
+      
+  }
+  }
 
 function handleTextAreaChange(event) {
   message = event.target.value;
 }
 
-function handleReadMessage() {
-  speak(message);
+async function handleReadMessage() {
+  if (await TextToSpeech.isAvailable()) {
+    try {
+      await TextToSpeech.speak({
+        text: message,
+        // Optional options:
+        // - locale: "en-US" (specify language)
+        // - rate: 1 (speed of speech)
+        // - pitch: 1 (pitch of voice)
+        // - volume: 1 (volume of speech)
+      });
+    } catch (error) {
+      console.error("Error speaking text:", error);
+    }
+  } else {
+    console.warn("Text-to-Speech not available");
+  }
 }
 </script>
 
@@ -66,19 +88,20 @@ function handleReadMessage() {
 
     <div class="grid gap-2">
       <div class="flex gap-2">
-        <Button class="w-1/3" onclick={() => speak("Hey")} variant="outline">Hey</Button>
-        <Button class="w-1/3" onclick={() => speak("How are you?")} variant="outline">How are you?</Button>
-        <Button class="w-1/3" onclick={() => speak("Good Morning")} variant="outline">Good morning</Button>
+        <Button class="w-1/2" onclick={() => speak("Hey")} variant="outline">Hey</Button>
+        <Button class="w-1/2" onclick={() => speak("How are you?")} variant="outline">How are you?</Button>
       </div>
       <div class="flex gap-2">
-        <Button class="w-1/3" onclick={() => speak("Nice to meet you.")} variant="outline">Nice to meet you</Button>
-        <Button class="w-1/3" onclick={() => speak("i love you")} variant="outline">I love you</Button>
-        <Button class="w-1/3" onclick={() => speak("thank you")} variant="outline">Thank you</Button>
+        <Button class="w-1/2" onclick={() => speak("Nice to meet you.")} variant="outline">Nice to meet you</Button>
+        <Button class="w-1/2" onclick={() => speak("i love you")} variant="outline">I love you</Button>
       </div>
       <div class="flex gap-2">
-        <Button class="w-1/3" onclick={() => speak("How's your day?")} variant="outline">How's your day</Button>
-        <Button class="w-1/3" onclick={() => speak("Yes")} variant="outline">Yes</Button>
-        <Button class="w-1/3" onclick={() => speak("No")} variant="outline">No</Button>
+        <Button class="w-1/2" onclick={() => speak("How's your day?")} variant="outline">How's your day</Button>
+        <Button class="w-1/2" onclick={() => speak("Good Morning")} variant="outline">Good morning</Button>
+      </div>
+      <div class="flex gap-2">
+        <Button class="w-1/2" onclick={() => speak("Yes")} variant="outline">Yes</Button>
+        <Button class="w-1/2" onclick={() => speak("No")} variant="outline">No</Button>
       </div>
     </div>
   </Card.Content>
