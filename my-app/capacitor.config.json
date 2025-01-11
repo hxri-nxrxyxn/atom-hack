@@ -1,0 +1,10 @@
+{
+  "appId": "com.atom.app",
+  "appName": "atom",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

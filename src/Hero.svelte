@@ -3,6 +3,10 @@
   import Nav from "./Nav.svelte"
   import * as Card from "$lib/components/ui/card/index.js";
   import { Button } from "$lib/components/ui/button/index.js";
+
+  fetch('http://175.20.1.154:5555/send-data')
+  .then(r => r.text())
+  .then(text => console.log(text));
 </script>
 
 <main>
